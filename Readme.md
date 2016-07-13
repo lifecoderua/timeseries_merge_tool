@@ -5,7 +5,7 @@
 Time series are stored in files with the following format:
 - files are multiline plain text files in ASCII encoding
 - each line contains exactly one record
-- each record contains date and integer value; records are encoded like so: YYYY­MM­DD:X
+- each record contains date and integer value; records are encoded like so: YYYY-­MM-­DD:X
 - dates within single file are non­duplicate and sorted in ascending order
 - files can be bigger than RAM available on target host
 
