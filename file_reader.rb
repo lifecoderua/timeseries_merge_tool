@@ -1,10 +1,19 @@
-require 'date'
+# require 'date'
+require 'CSV'
+BATCH_SIZE = 100
 
 class FileReader
-  attr_reader :century 
+  attr_reader :century
+  @csv 
+  @buffer
 
-  def initialize
+  def initialize path
     # open file
+    handle = File.open(path)
+    @csv = CSV.new(handle, col_sep: ':')
+    @buffer = []
+
+p pick 
     # read+parse first entry
     # set next century
   end
@@ -13,8 +22,9 @@ class FileReader
     # return data block until next century, data length limit or EOF 
   end
 
-  def parse
-    # parse entries block 
+  def pick
+    # [date, val]
+    @csv.readline 
   end
 end
 

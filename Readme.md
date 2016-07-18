@@ -16,7 +16,7 @@ conventions as described above. Records with same date value should be merged in
 
 ## Assumptions
 
-- we expect low but reasonable amount of RAM, allowing us to store and manipulate with some reasonable amount of data (several centuries) in RAM;
+- we expect low but reasonable amount of RAM, allowing us to store and manipulate with some reasonable amount of data (lets say hals a thousand records) in RAM;
 - we expect all inputs to be valid and each file to has at least one entry
 - we expect at least one input file to be provided
 - we expect no years below zero

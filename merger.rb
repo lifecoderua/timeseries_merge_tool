@@ -1,4 +1,4 @@
-requre 'file_reader.rb'
+require './file_reader.rb'
 
 class Merger
   def initialize source_folder = './data/input/', result_file = './data/output.csv'
@@ -6,6 +6,10 @@ class Merger
     @target_century = nil
 
     # initialize FileReaders
+    input_files = Dir.glob( File.join(source_folder, '*') )
+    input_files.each do |path|
+      @file_readers.push FileReader.new(path)
+    end
     
     # compute starting point (earliest century)
   end

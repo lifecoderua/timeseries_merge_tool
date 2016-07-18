@@ -1,4 +1,4 @@
-require 'merger.rb'
+require './merger.rb'
 
-merger = new Merger
+merger = Merger.new
 merger.run
