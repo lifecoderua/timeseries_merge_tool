@@ -31,6 +31,8 @@ class FileReader
 
     @buffer
   end
+  
+private  
 
   def pick
     @next_line = @csv.readline 
