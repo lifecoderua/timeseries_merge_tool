@@ -24,7 +24,11 @@ conventions as described above. Records with same date value should be merged in
 ## Usage
 
 ```
+# data run only 
 ruby run.rb
+
+# test run: regenerate input and compare with etalon file
+ruby test.rb
 ```
 
 
