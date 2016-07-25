@@ -1,4 +1,3 @@
-# require 'date'
 require 'CSV'
 BATCH_SIZE = 100
 
@@ -9,15 +8,11 @@ class FileReader
   @next_line
 
   def initialize path
-    # open file
     handle = File.open(path)
     @csv = CSV.new(handle, col_sep: ':', converters: :numeric)
     @next_line = nil
     @buffer = []
     pick
-
-    # read+parse first entry
-    # set next century
   end
 
   def eof?
@@ -25,7 +20,6 @@ class FileReader
   end
 
   def next
-    # return data block until next century, data length limit or EOF 
     @buffer = []
     current_century = @century
 
@@ -39,7 +33,6 @@ class FileReader
   end
 
   def pick
-    # [date, val]
     @next_line = @csv.readline 
     return nil if @next_line.nil?
     @century = @next_line.first[0..1]
